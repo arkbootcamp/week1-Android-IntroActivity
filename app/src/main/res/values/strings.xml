@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Latihan Android Week 1</string>
+    <string name="title_login">Login</string>
+    <string name="title_register">Register</string>
+    <string name="activity_a">Activity A</string>
+    <string name="to_activity_a">To Activity A</string>
+    <string name="to_activity_b">To Activity B</string>
+    <string name="activity_b">Activity B</string>
+</resources>
