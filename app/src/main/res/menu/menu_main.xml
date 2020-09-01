@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_to_second_activity"
+        android:title="Go To FragmentActivity"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_show_toast"
+        android:title="Show Toast"
+        android:icon="@drawable/ic_baseline_emoji_emotions_24"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/setting"
+        android:title="Setting"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/setting2"
+        android:title="Setting2"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/setting3"
+        android:title="Setting3"
+        app:showAsAction="never"/>
+</menu>

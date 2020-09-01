@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
+import com.erdin.latihanandroidweek1.drawer.SimpleDrawerActivity
+import com.erdin.latihanandroidweek1.toolbar.SimpleToolbarActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         val btnActivityFL = findViewById<Button>(R.id.btn_to_frame_layout)
         val btnActivityRL = findViewById<Button>(R.id.btn_to_relative_layout)
         val btnActivityCL = findViewById<Button>(R.id.btn_to_constraint_layout)
+        val btnToolbar = findViewById<Button>(R.id.btn_to_toolbar)
 
         btnActivityA.setOnClickListener {
             val intentA = Intent(this, OneActivity::class.java)
@@ -26,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnActivityB.setOnClickListener {
-            val intentB = Intent(this, TwoActivity::class.java)
+            val intentB = Intent(this, SimpleDrawerActivity::class.java)
             startActivity(intentB)
         }
 
@@ -47,6 +50,11 @@ class MainActivity : AppCompatActivity() {
 
         btnActivityCL.setOnClickListener {
             val intent = Intent(this, ConstraintLayoutActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnToolbar.setOnClickListener {
+            val intent = Intent(this, SimpleToolbarActivity::class.java)
             startActivity(intent)
         }
 
