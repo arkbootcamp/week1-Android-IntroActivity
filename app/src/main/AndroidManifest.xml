@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.erdin.latihanandroidweek1">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_redbus"
@@ -9,7 +12,13 @@
         android:roundIcon="@mipmap/ic_redbus_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fragment.SimpleFragmentActivity"></activity>
+        <activity android:name=".sharedpref.LearnSharedPrefActivity"></activity>
+        <activity android:name=".recyclerview.SimpleRecyclerViewActivity" />
+        <activity android:name=".webview.SimpleWebViewActivity" />
+        <activity android:name=".tabpager.SimpleTabPagerActivity" />
+        <activity android:name=".dialog.SimpleDialogActivity" />
+        <activity android:name=".databinding.SimpleDataBindingActivity" />
+        <activity android:name=".fragment.SimpleFragmentActivity" />
         <activity
             android:name=".drawer.SimpleDrawerActivity"
             android:label="@string/title_activity_simple_drawer"

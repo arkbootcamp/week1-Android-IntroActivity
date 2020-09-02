@@ -11,15 +11,27 @@
         android:icon="@drawable/ic_baseline_emoji_emotions_24"
         app:showAsAction="always" />
     <item
-        android:id="@+id/setting"
-        android:title="Setting"
+        android:id="@+id/action_to_data_binding_activity"
+        android:title="to Data Binding"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/setting2"
-        android:title="Setting2"
+        android:id="@+id/action_to_dialog_activity"
+        android:title="to Dialog"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/setting3"
-        android:title="Setting3"
+        android:id="@+id/action_to_tab_view_pager"
+        android:title="to Tab n View Pager"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_to_web_view"
+        android:title="to Web View"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_to_recycler_view"
+        android:title="to Recycler View"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_to_shared_pref_screen"
+        android:title="to Shared Pref Screen"
         app:showAsAction="never"/>
 </menu>
