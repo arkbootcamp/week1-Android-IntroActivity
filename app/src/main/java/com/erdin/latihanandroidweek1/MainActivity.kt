@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
+import com.erdin.latihanandroidweek1.auth.LoginWahyuActivity
 import com.erdin.latihanandroidweek1.drawer.SimpleDrawerActivity
+import com.erdin.latihanandroidweek1.retrofit.LearnRetrofitActivity
 import com.erdin.latihanandroidweek1.room.WordListActivity
 import com.erdin.latihanandroidweek1.toolbar.SimpleToolbarActivity
 
@@ -23,11 +25,12 @@ class MainActivity : AppCompatActivity() {
         val btnActivityCL = findViewById<Button>(R.id.btn_to_constraint_layout)
         val btnToolbar = findViewById<Button>(R.id.btn_to_toolbar)
 
+        btnActivityA.text = "to Login Activity"
         btnActivityB.text = "To Room Activity"
 
         btnActivityA.setOnClickListener {
-            val intentA = Intent(this, OneActivity::class.java)
-            intentA.putExtra("domainName", "arkademy.com")
+            val intentA = Intent(this, LoginWahyuActivity::class.java)
+//            intentA.putExtra("domainName", "arkademy.com")
             startActivity(intentA)
         }
 

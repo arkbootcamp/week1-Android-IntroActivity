@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.erdin.latihanandroidweek1">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,8 +12,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_redbus_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".room.AddWordActivity"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".auth.LoginWahyuActivity"></activity>
+        <activity android:name=".retrofit.LearnRetrofitActivity" />
+        <activity android:name=".room.AddWordActivity" />
         <activity android:name=".room.WordListActivity" />
         <activity android:name=".sharedpref.LearnSharedPrefActivity" />
         <activity android:name=".recyclerview.SimpleRecyclerViewActivity" />

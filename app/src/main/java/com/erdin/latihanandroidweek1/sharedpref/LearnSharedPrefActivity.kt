@@ -15,6 +15,7 @@ class LearnSharedPrefActivity : AppCompatActivity() {
     companion object {
         const val SHARED_PREFERENCES_NAME = "LearnSharedPref"
         const val KEY_EMAIL = "KEY_EMAIL"
+        const val KEY_TOKEN = "KEY_TOKEN"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
