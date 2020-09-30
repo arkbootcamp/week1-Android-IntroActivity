@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_redbus_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sharedpref.LearnSharedPrefActivity"></activity>
+        <activity android:name=".room.AddWordActivity"></activity>
+        <activity android:name=".room.WordListActivity" />
+        <activity android:name=".sharedpref.LearnSharedPrefActivity" />
         <activity android:name=".recyclerview.SimpleRecyclerViewActivity" />
         <activity android:name=".webview.SimpleWebViewActivity" />
         <activity android:name=".tabpager.SimpleTabPagerActivity" />

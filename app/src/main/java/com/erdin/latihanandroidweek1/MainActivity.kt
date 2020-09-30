@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import com.erdin.latihanandroidweek1.drawer.SimpleDrawerActivity
+import com.erdin.latihanandroidweek1.room.WordListActivity
 import com.erdin.latihanandroidweek1.toolbar.SimpleToolbarActivity
 
 class MainActivity : AppCompatActivity() {
@@ -22,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         val btnActivityCL = findViewById<Button>(R.id.btn_to_constraint_layout)
         val btnToolbar = findViewById<Button>(R.id.btn_to_toolbar)
 
+        btnActivityB.text = "To Room Activity"
+
         btnActivityA.setOnClickListener {
             val intentA = Intent(this, OneActivity::class.java)
             intentA.putExtra("domainName", "arkademy.com")
@@ -29,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnActivityB.setOnClickListener {
-            val intentB = Intent(this, SimpleDrawerActivity::class.java)
+            val intentB = Intent(this, WordListActivity::class.java)
             startActivity(intentB)
         }
 
