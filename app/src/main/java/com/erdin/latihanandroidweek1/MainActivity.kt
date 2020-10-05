@@ -25,11 +25,11 @@ class MainActivity : AppCompatActivity() {
         val btnActivityCL = findViewById<Button>(R.id.btn_to_constraint_layout)
         val btnToolbar = findViewById<Button>(R.id.btn_to_toolbar)
 
-        btnActivityA.text = "to Login Activity"
+        btnActivityA.text = "to Retrofit Activity"
         btnActivityB.text = "To Room Activity"
 
         btnActivityA.setOnClickListener {
-            val intentA = Intent(this, LoginWahyuActivity::class.java)
+            val intentA = Intent(this, LearnRetrofitActivity::class.java)
 //            intentA.putExtra("domainName", "arkademy.com")
             startActivity(intentA)
         }

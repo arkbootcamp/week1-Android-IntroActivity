@@ -39,7 +39,7 @@ class LearnRetrofitActivity : AppCompatActivity() {
         val service = retrofit.create(EmployeeApiService::class.java)
 
         binding.progressBar.visibility = View.VISIBLE
-        service.getAllEmployee().enqueue(object : Callback<EmployeeResponse> {
+        service.getEmployee().enqueue(object : Callback<EmployeeResponse> {
             override fun onFailure(call: Call<EmployeeResponse>, t: Throwable) {
                 binding.progressBar.visibility = View.GONE
                 Log.d("android1", "onFailure : ${Thread.currentThread().name}")
@@ -83,7 +83,7 @@ class LearnRetrofitActivity : AppCompatActivity() {
                     e.printStackTrace()
                 }
             }
-
+            Log.d("android1", response.toString())
             if (response is EmployeeResponse) {
                 val list = response.data?.map {
                     EmployeeModel(it.id.orEmpty(), it.name.orEmpty(), it.salary.orEmpty(), it.age.orEmpty())
