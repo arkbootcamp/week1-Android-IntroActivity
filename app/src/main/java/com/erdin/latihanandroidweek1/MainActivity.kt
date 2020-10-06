@@ -29,13 +29,13 @@ class MainActivity : AppCompatActivity() {
         btnActivityB.text = "To Room Activity"
 
         btnActivityA.setOnClickListener {
-            val intentA = Intent(this, LearnRetrofitActivity::class.java)
+            val intentA = Intent(this, LoginWahyuActivity::class.java)
 //            intentA.putExtra("domainName", "arkademy.com")
             startActivity(intentA)
         }
 
         btnActivityB.setOnClickListener {
-            val intentB = Intent(this, WordListActivity::class.java)
+            val intentB = Intent(this, LearnRetrofitActivity::class.java)
             startActivity(intentB)
         }
 

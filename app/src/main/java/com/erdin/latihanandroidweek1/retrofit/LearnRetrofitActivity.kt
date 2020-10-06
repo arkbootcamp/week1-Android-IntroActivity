@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.erdin.latihanandroidweek1.R
+import com.erdin.latihanandroidweek1.auth.ApiClient
 import com.erdin.latihanandroidweek1.databinding.ActivityLearnRetrofitBinding
 import kotlinx.coroutines.*
 import retrofit2.Call
