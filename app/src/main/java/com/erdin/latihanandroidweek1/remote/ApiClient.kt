@@ -1,4 +1,4 @@
-package com.erdin.latihanandroidweek1.auth
+package com.erdin.latihanandroidweek1.remote
 
 import android.content.Context
 import okhttp3.OkHttpClient
@@ -14,7 +14,7 @@ class ApiClient {
         private const val BASE_URL = "http://107.21.75.126:8080/"
         private var retrofit: Retrofit? = null
 
-        fun provideHttpLoggingInterceptor() = run {
+        private fun provideHttpLoggingInterceptor() = run {
             HttpLoggingInterceptor().apply {
                 apply { level = HttpLoggingInterceptor.Level.BODY }
             }

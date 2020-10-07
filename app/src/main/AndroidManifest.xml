@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".auth.LoginWahyuActivity"></activity>
+        <activity android:name=".project.ProjectListActivity"></activity>
+        <activity android:name=".mvvm.LoginActivity" />
+        <activity android:name=".mvp.ProjectsActivity" />
         <activity android:name=".retrofit.LearnRetrofitActivity" />
         <activity android:name=".room.AddWordActivity" />
         <activity android:name=".room.WordListActivity" />

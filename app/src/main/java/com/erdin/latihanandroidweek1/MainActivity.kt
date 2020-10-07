@@ -6,8 +6,9 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
-import com.erdin.latihanandroidweek1.auth.LoginWahyuActivity
-import com.erdin.latihanandroidweek1.drawer.SimpleDrawerActivity
+import com.erdin.latihanandroidweek1.mvp.ProjectsActivity
+import com.erdin.latihanandroidweek1.mvvm.LoginActivity
+import com.erdin.latihanandroidweek1.project.ProjectListActivity
 import com.erdin.latihanandroidweek1.retrofit.LearnRetrofitActivity
 import com.erdin.latihanandroidweek1.room.WordListActivity
 import com.erdin.latihanandroidweek1.toolbar.SimpleToolbarActivity
@@ -24,18 +25,21 @@ class MainActivity : AppCompatActivity() {
         val btnActivityRL = findViewById<Button>(R.id.btn_to_relative_layout)
         val btnActivityCL = findViewById<Button>(R.id.btn_to_constraint_layout)
         val btnToolbar = findViewById<Button>(R.id.btn_to_toolbar)
+        val btnRoom = findViewById<Button>(R.id.btn_to_room)
+        val btnLogin = findViewById<Button>(R.id.btn_to_login)
+        val btnMvp = findViewById<Button>(R.id.btn_to_mvp)
+        val btnMvvm = findViewById<Button>(R.id.btn_to_mvvm)
 
-        btnActivityA.text = "to Retrofit Activity"
-        btnActivityB.text = "To Room Activity"
+        btnLogin.text = "to Retrofit Activity"
 
         btnActivityA.setOnClickListener {
-            val intentA = Intent(this, LoginWahyuActivity::class.java)
-//            intentA.putExtra("domainName", "arkademy.com")
+            val intentA = Intent(this, OneActivity::class.java)
+            intentA.putExtra("domainName", "arkademy.com")
             startActivity(intentA)
         }
 
         btnActivityB.setOnClickListener {
-            val intentB = Intent(this, LearnRetrofitActivity::class.java)
+            val intentB = Intent(this, TwoActivity::class.java)
             startActivity(intentB)
         }
 
@@ -63,6 +67,28 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SimpleToolbarActivity::class.java)
             startActivity(intent)
         }
+
+        btnRoom.setOnClickListener {
+            val intent = Intent(this, WordListActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnLogin.setOnClickListener {
+            val intent = Intent(this, LearnRetrofitActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnMvp.setOnClickListener {
+            val intent = Intent(this, ProjectsActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnMvvm.setOnClickListener {
+            val intent = Intent(this, ProjectListActivity::class.java)
+            startActivity(intent)
+        }
+
+
 
         Toast.makeText(this, "Activity: OnCreate()", Toast.LENGTH_LONG).show()
         Log.d("lifecycle", "OnCreate()")

@@ -1,5 +1,6 @@
-package com.erdin.latihanandroidweek1.auth
+package com.erdin.latihanandroidweek1.mvvm
 
+import com.erdin.latihanandroidweek1.mvvm.LoginResponse
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
