@@ -23,13 +23,13 @@ class ProjectListViewModel : ViewModel(), CoroutineScope {
         this.service = service
     }
 
-    fun getProjectList() {
+    fun getProjectList(search: String?) {
         launch {
             isLoadingLiveData.value = true
 
             val response = withContext(Dispatchers.IO) {
                 try {
-                    service?.getAllEmployee(100)
+                    service?.getAllEmployee(100, search)
                 } catch (e: Throwable) {
                     e.printStackTrace()
                 }

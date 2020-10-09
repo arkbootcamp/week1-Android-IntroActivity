@@ -8,8 +8,8 @@ import retrofit2.http.*
 
 interface ProjectsApiService {
 
-    @GET("project/?limit=100")
-    suspend fun getAllEmployee(@Query("limit") limit: Int?): ProjectsResponse
+    @GET("project")
+    suspend fun getAllEmployee(columnName: String, @Query("limit") limit: Int?, @Query("search") search: String?) : ProjectsResponse
 
     @Multipart
     @POST("project")

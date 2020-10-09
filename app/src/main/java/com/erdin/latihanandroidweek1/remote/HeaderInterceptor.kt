@@ -9,7 +9,7 @@ class HeaderInterceptor (val mContext: Context) : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response = chain.run {
         val defaultSharedPref = androidx.preference.PreferenceManager.getDefaultSharedPreferences(mContext)
         val token = defaultSharedPref.getString(LearnSharedPrefActivity.KEY_TOKEN, "")
-        val tokenAuth = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyX25hbWUiOiJSb3N5aWRhIiwidXNlcl9lbWFpbCI6InJvc3lpZGFAZ21haWwuY29tIiwidXNlcl9yb2xlIjoxLCJ1c2VyX3N0YXR1cyI6MCwiaWF0IjoxNjAyMjA5MzI3LCJleHAiOjE2MDIyMTI5Mjd9.MgrfOT0mdOK6Aiz57fpHoleAVlUtvvBbA__cUHBEbcA"
+        val tokenAuth = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyX25hbWUiOiJSb3N5aWRhIiwidXNlcl9lbWFpbCI6InJvc3lpZGFAZ21haWwuY29tIiwidXNlcl9yb2xlIjoxLCJ1c2VyX3N0YXR1cyI6MCwiaWF0IjoxNjAyMjEzNDAyLCJleHAiOjE2MDIyMTcwMDJ9.eGTupsUVwGhNH81zbPi7C5xG7E9Fhl02g65SuNsUXsk"
         proceed(
             request().newBuilder()
                 .addHeader("Authorization", "Bearer $tokenAuth")

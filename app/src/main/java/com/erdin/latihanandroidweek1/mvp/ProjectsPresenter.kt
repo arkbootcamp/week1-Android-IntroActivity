@@ -25,7 +25,7 @@ class ProjectsPresenter(private val coroutineScope: CoroutineScope,
             val response = withContext(Dispatchers.IO) {
                 Log.d("android1", "callApi : ${Thread.currentThread().name}")
                 try {
-                    service?.getAllEmployee(100)
+                    service?.getAllEmployee(100, "")
                 } catch (e: Throwable) {
                     e.printStackTrace()
                 }
