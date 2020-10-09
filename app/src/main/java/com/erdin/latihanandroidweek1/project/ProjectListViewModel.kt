@@ -6,6 +6,7 @@ import com.erdin.latihanandroidweek1.mvp.ProjectsApiService
 import com.erdin.latihanandroidweek1.mvp.ProjectsModel
 import com.erdin.latihanandroidweek1.mvp.ProjectsResponse
 import kotlinx.coroutines.*
+import org.json.JSONObject
 import kotlin.coroutines.CoroutineContext
 
 class ProjectListViewModel : ViewModel(), CoroutineScope {
@@ -28,7 +29,7 @@ class ProjectListViewModel : ViewModel(), CoroutineScope {
 
             val response = withContext(Dispatchers.IO) {
                 try {
-                    service?.getAllEmployee()
+                    service?.getAllEmployee(100)
                 } catch (e: Throwable) {
                     e.printStackTrace()
                 }
